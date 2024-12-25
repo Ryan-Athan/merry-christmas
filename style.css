@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('./imgs/moon-31665_1280.png') no-repeat center center/cover;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Main container for the Christmas elements */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+/* Message styling */
+.message {
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate, bounce 1s infinite alternate;
+    margin-bottom: 20px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.message h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    animation: fadeIn 3s ease;
+}
+
+.message p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-style: italic;
+    animation: fadeIn 4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container with border and center elements */
+.border-box {
+    width: 90%;
+    max-width: 800px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* Christmas tree styling */
+.tree {
+    margin-top: 20px;
+    animation: fadeIn 5s ease;
+}
+
+.tree img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+/* Santa sleigh styling */
+.sleigh {
+    position: absolute;
+    bottom: -10%;
+    left: -20%;
+    animation: moveSleigh 15s linear infinite;
+}
+
+.sleigh img {
+    width: 80%;
+    max-width: 300px;
+}
+
+@keyframes moveSleigh {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(120vw);
+    }
+}
+
+/* Snowflake styling */
+.snowflake {
+    position: absolute;
+    top: -10%;
+    opacity: 0.8;
+    font-size: 2rem;
+    color: #a9cfe3;
+    animation: fallSnowflakes linear infinite;
+    z-index: 2;
+}
+
+@keyframes fallSnowflakes {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+/* Star styling */
+.star {
+    position: fixed;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.9;
+    animation: fallStars linear infinite;
+    z-index: 1;
+}
+
+@keyframes fallStars {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Twinkling Lights */
+.twinkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 0, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.7);
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styling for Different Screen Sizes */
+@media (max-width: 1024px) {
+    .message h1 {
+        font-size: 3rem;
+    }
+
+    .message p {
+        font-size: 1.2rem;
+    }
+
+    .tree img {
+        width: 80%;
+    }
+
+    .sleigh img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .message h1 {
+        font-size: 2.5rem;
+    }
+
+    .message p {
+        font-size: 1rem;
+    }
+
+    .border-box {
+        padding: 15px;
+    }
+
+    .tree img {
+        width: 90%;
+    }
+    .sleigh img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .message h1 {
+        font-size: 2rem;
+    }
+
+    .message p {
+        font-size: 0.9rem;
+    }
+
+    .border-box {
+        padding: 10px;
+    }
+
+    .tree img {
+        width: 90%;
+    }
+
+    .sleigh img {
+        width: 180px;
+    }
+}
+
+/* Ensure everything is displayed nicely on mobile devices */
+@media (max-width: 375px) {
+    
+    .message h1{
+        font-size: 1.8rem;
+    }
+
+    .message p{
+        font-size: 0.8rem;
+    }
+
+    .tree img{
+        width: 100%;
+    }
+
+    .sleigh img{
+        width: 150px;
+    }
+    
+}
