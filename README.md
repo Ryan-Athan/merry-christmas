@@ -32,4 +32,4 @@ Ensure you have the following tools installed on your system:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/merry-christmas-page.git
+   git clone https://github.com/Ryan-Athan/merry-christmas-page.git
