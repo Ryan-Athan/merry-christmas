@@ -1,4 +1,4 @@
-# 🎄 Merry Christmas Interactive Page
+# 🎄 Merry Christmas Interactive Page and 
 
 Welcome to the **Merry Christmas Interactive Page**! This repository contains a festive and responsive webpage designed to celebrate the holiday season. It features animated snowflakes, stars, a glowing Christmas tree, a Santa sleigh, and interactive twinkling lights to spread the holiday cheer. 🎅✨
 
